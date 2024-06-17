@@ -1,0 +1,149 @@
+/*---------- CX BUSCA ----------*/
+.search-container {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.search-section {
+    display: none; /* Inicialmente oculto */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #127e71;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form a {
+    text-decoration: none;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #127e71;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #76bbb3;
+    color: black;
+    text-shadow: 0px 0px 5px #fff;
+}
+
+select  {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/*---------- gerenciamento ----------*/
+.adm {
+    list-style: none;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4%;
+    float: left;
+    margin-left: 395px;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: medium;
+    color: white;
+    background-color: #127e71;
+}
+
+.adm li {
+    position: relative;
+    float: left;
+    border-right: 0px solid white;
+    border-radius: 8px;
+    background-color: #127e71;
+    
+}
+
+.adm li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+    background-color: #127e71;
+}
+
+.adm li a:hover {
+    background: #76bbb3;
+    color: black;
+    text-shadow: 0px 0px 5px #fff;
+    border-radius: 4px;
+}
+
+.adm li ul {
+    position: absolute;
+    top: 28px;
+    right: 0;
+    background-color: #127e71;
+    border-radius: 8px;
+    display: none;
+}
+
+.adm li:hover ul, .adm li.over ul {
+    display: block;
+    border-radius: 8px;
+}
+

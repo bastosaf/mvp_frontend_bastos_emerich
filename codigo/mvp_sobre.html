@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title> Editora Unifeso </title>
+        <link rel="stylesheet" type="text/css" href="css/estilo_menu_sup_novo.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo_geral_novo.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo_cx_busca_novo.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo_rodape_novo.css">
+        <script src="js/mvp.js"></script>
+    </head>
+
+    <body>
+        
+        <header class="top">
+        <!--MENU-->
+        <nav>
+            <ul class="menu">
+                <li><a href="mvp_index.html">Início</a></li>
+                <li><a href="mvp_sobre.html">Sobre a Editora</a></li>
+                <li>
+                    <a href="#">Entrar</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#" onclick="openLoginDialog('aluno')">Sou aluno</a></li>
+                        <li><a href="#" onclick="openLoginDialog('colaborador')">Sou colaborador</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Caixa de diálogo de login -->
+        <div id="loginDialog" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeLoginDialog()">&times;</span>
+                <h2> Insira seus dados para acessar o sistema </h2>
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <label for="matricula"> Matrícula: </label>
+                    <input type="text" id="matricula" name="matricula" required>
+                    <label for="senha"> Senha: </label>
+                    <input type="password" id="senha" name="senha" required>
+                    <input type="hidden" id="userType" name="userType">
+                    <button type="submit"> Entrar </button>
+                </form>
+            </div>
+        </div>
+            
+            <!--LOGO-->
+            <div id="img_logo">
+                <img src="img\logo.png" alt="logo Editora Unifeso">
+            <!--<p id="inicio"> Bem-vindo à plataforma da Editora Unifeso!</p>-->
+            </div>
+        </header>
+
+        <!--LINHA SOBRE A EDITORA-->
+        <div class="editora">
+            <h1> Sobre a Editora Unifeso </h1>
+            <p> Não é exagero dizer que toda instituição, vinculada à grande área da educação, tem um compromisso que se propaga para além daqueles que se manifestam no interior de sua estrutura física. Estando inserida em um determinado "espaço", é fruto de um determinado lugar e tempo e, dada sua natureza particular, acaba por estabelecer uma relação dialética com o meio social onde se encontra inserida, ou seja, tanto "transforma" quanto é "transformada", numa troca incansável. Neste sentido, grande parte do conhecimento produzido no interior destas instituições ressona, consciente ou inconscientemente, no "espaço" onde se encontra. No caso do Unifeso, esta dialética inevitável ganha contornos de um "projeto" e esta é, sem dúvida, a mais importante contribuição do Unifeso para a sociedade: que o conjunto de conhecimentos produzidos seja capaz de extrapolar os muros da Instituição, afinal, é preciso "saber para prever e prever para prover", já dizia Auguste Comte. De alguma forma, já é possível perceber esta concepção pelo que vemos preconizado na própria missão institucional, a saber: “promover a educação, a ciência e a cultura constituindo-se num polo de desenvolvimento regional, de modo a contribuir para a construção de uma sociedade justa, solidária e ética”.</p>
+        
+            <p> Foi na esteira destas perspectivas que, no ano de 2016, foi proposta a criação de um núcleo de difusão acadêmica, devidamente formalizado como uma instância desta IES: a Editora Unifeso. A partir do Plano de Incentivo à Difusão da Produção Acadêmica (PIDPA) do Unifeso, apresentado no ano seguinte, 2017, o objetivo era organizar as ações necessárias para o cumprimento da política institucional de produção e difusão acadêmica, atendendo as demandas oriundas de seu corpo docente, discente e técnico-administrativo e, por conseguinte, as prerrogativas do MEC. Embora ainda carente de uma estruturação capaz de ampliar as capacidades do setor, a Editora Unifeso obteve sucesso e foi capaz de contemplar variadas modalidades de produções (artigos científicos, trabalhos apresentados em jornadas e congressos, livros, cartilhas, POPs, entre outros), sempre tendo em conta a natureza específica destas publicações. De todo modo, urgia a necessidade de uma nova organização da engrenagem, capaz de tornar este escoamento ainda mais eficiente e, se o ano de 2018 marcou de maneira indelével a reestruturação do setor, o ano de 2019 fez jus ao investimento, alavancando as principais estatísticas do setor, sobretudo, no que se refere à publicação de livros da Coleção Feso e artigos publicados nos periódicos institucionais. Com os cargos de Coordenador Editorial e Assistente devidamente formalizados, a projeção orçamentária de 2019 já contava com a contratação de um Revisor para a Editora Unifeso, processo realizado ainda no primeiro semestre, e que permitiu um contorno ainda mais profissional ao setor. Para além da formalização do quadro técnico da Editora (Coordenador, Assistente e Revisor), cabia ainda uma revisão do seu Regimento Interno, tendo em vista a necessidade de adequar as regras estabelecidas pelo documento e a realidade da Editora Unifeso, objetivo também concluído no ano de 2019. </p>
+         
+            <p> Esta reestruturação, preliminar e fundamental, da Editora Unifeso, concluída no ano de 2019, se justificou em diferentes dimensões. Primeiro, pois o investimento em um setor desta natureza demonstra o quanto esta instituição reconhece a importância da disseminação do saber e sua contribuição para o desenvolvimento social. A abrangência de um projeto desta natureza não pode ser nem mesmo mensurada, sobretudo, por conta do alcance das mídias eletrônicas. Mas é certo que promove de maneira, ainda mais contundente, a relação dialética entre a comunidade acadêmica e a sociedade, e seus desdobramentos evidentes, conforme mencionamos acima. De todo modo, trata-se de um passo decisivo, no sentido de compreender a importância da disseminação de conhecimentos para a formação da sociedade que queremos: mais crítica, solidária e capaz de enfrentar as dificuldades que se apresentam. Outro aspecto, ainda dentro do escopo supramencionado, é o desenvolvimento científico e filosófico. O aprimoramento da difusão acadêmica nada mais é do que a disseminação de métodos e práticas capazes de contribuir com o universo do conhecimento científico nas diversas áreas, seja corroborando com estas práticas ou até mesmo confrontando seus avanços, como no caso de certos trabalhos na área das humanidades, por exemplo. Entrementes, todo este mecanismo de difusão imprime, sem dúvidas, um aspecto de visibilidade institucional perante à comunidade e às instituições científicas, assim como as agências reguladoras e de fomento à pesquisa e à inovação.</p>
+        
+            <p> Cria-se, portanto, um ambiente favorável ao projeto de excelência do Unifeso como centro universitário e a necessidade de se diferenciar no concorrido cenário educacional brasileiro. Todo o esforço dedicado para esta reestruturação, é claro, teve como ponto de partida o resultado de avaliações internas, que apontavam para a necessidade de uma reorganização e ampliação da Editora Unifeso como setor de difusão do conhecimento científico, técnico, cultural, artístico e tecnológico desta IES.</p>
+            </br>
+            <button type="back"> <a href="mvp_index.html">Voltar para página inicial</a></button>
+        </div>

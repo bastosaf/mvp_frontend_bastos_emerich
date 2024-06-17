@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title> Editora Unifeso </title>
+        <link rel="stylesheet" type="text/css" href="css/estilo_menu_sup_novo.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo_geral_novo.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo_cx_busca_novo.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo_rodape_novo.css">
+        <link rel="stylesheet" type="text/css" href="css\estilo_result_novo.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="js/mvp.js"></script>
+    </head>
+
+    <body>
+        <header class="top">
+            <!--MENU-->
+        <nav>
+            <ul class="menu">
+                <li><a href="mvp_index.html">Início</a></li>
+                <li><a href="mvp_sobre.html">Sobre a Editora</a></li>
+                <li>
+                    <a href="#">Entrar</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#" onclick="openLoginDialog('aluno')">Sou aluno</a></li>
+                        <li><a href="#" onclick="openLoginDialog('colaborador')">Sou colaborador</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Caixa de diálogo de login -->
+        <div id="loginDialog" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeLoginDialog()">&times;</span>
+                <h2> Insira seus dados para acessar o sistema </h2>
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <label for="matricula"> Matrícula: </label>
+                    <input type="text" id="matricula" name="matricula" required>
+                    <label for="senha"> Senha: </label>
+                    <input type="password" id="senha" name="senha" required>
+                    <input type="hidden" id="userType" name="userType">
+                    <button type="submit"> Entrar </button>
+                </form>
+            </div>
+        </div>
+            
+            <!--LOGO-->
+            <div id="img_logo">
+                <img src="img\logo.png" alt="logo Editora Unifeso">
+            </div>
+        </header>    
+
+        <main>
+            <div class="search-container-small">
+                <nav>
+                    <ul>
+                        <li><a href="#" onclick="showSection('search-general')">Pesquisa Geral</a></li>
+                        <li><a href="#" onclick="showSection('search-advanced')">Pesquisa Avançada</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Caixa de busca geral -->
+                <section id="search-general" class="search-section">
+                    <form>
+                        <input type="text" name="search" placeholder="Digite o que você deseja pesquisar...">
+                        <button type="submit">Pesquisar</button>
+                    </form>
+                </section>
+    
+                <!-- Busca avançada -->
+                <section id="search-advanced" class="search-section">
+                    <form>
+                        <div class="form-group">    
+                            <span>
+                                <select name="pesquisaAvancada">
+                                    <option>Pesquisar por:</option>
+                                    <option value="t">Título</option>
+                                    <option value="a">Autor</option>
+                                    <option value="p">Tipo da publicação</option>
+                                    <option value="d">Data da publicação</option>
+                                    <option value="c">Palavras-chave</option>
+                                </select>
+                            </span>
+                            <span>
+                                <input type="text" placeholder="Digite o termo da pesquisa">
+                            </span>
+                        </div>
+                        <button type="submit">Pesquisar</button>
+                    </form>
+                </section>
+            </div>
+    
+            <div class="results-container">
+                <div class="filters">
+                    <h2>Filtros de Busca</h2>
+                    <form>
+                        <div class="filter-group">
+                            <h3>Tipo de Publicação</h3>
+                            <label><input type="checkbox" name="category" value="abstract"> Resumo</label><br>
+                            <label><input type="checkbox" name="category" value="tcc"> Trabalho de conclusão de curso</label><br>
+                        </div>
+                    </br>
+                        <div class="filter-group">
+                            <h3>Data de Publicação</h3>
+                            <label><input type="checkbox" name="date" value="one"> 1 ano</label><br>
+                            <label><input type="checkbox" name="date" value="five"> 5 anos</label><br>
+                            <label><input type="checkbox" name="date" value="ten"> 10 anos</label><br>
+                            <label><input type="checkbox" name="date" value="more"> Mais de 10 anos</label><br>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="results">
+                    <p>Exibindo resultados de "<span id="search-terms">[termos da pesquisa]</span>"</p>
+                    <!-- Aqui vão os resultados da busca -->
+                    <div class="result-item">
+                        <h3>Título da Publicação 1</h3>
+                        <p>Autor: Lista de autores 1</p>
+                        <p>Resumo 1</p>
+                        </br>
+                        <div class="options">
+                            <i class="fas fa-download download-icon" title="Download"></i>
+                            <i class="fas fa-heart favorite-icon" title="Favoritar"></i>
+                            <i class="fas fa-comment comment-icon" title="Comentar"></i>
+                            <i class="fas fa-share share-icon" title="Compartilhar"></i>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <h3>Título da Publicação 2</h3>
+                        <p>Autor: Lista de autores 2</p>
+                        <p>Resumo 2</p>
+                        </br>
+                        <div class="options">
+                            <i class="fas fa-download download-icon" title="Download">  </i>
+                            <i class="fas fa-heart favorite-icon" title="Favoritar"></i>
+                            <i class="fas fa-comment comment-icon" title="Comentar"></i>
+                            <i class="fas fa-share share-icon" title="Compartilhar"></i>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <h3>Título da Publicação 3</h3>
+                        <p>Autor: Lista de autores 3</p>
+                        <p>Resumo 3</p>
+                        </br>
+                        <div class="options">
+                            <i class="fas fa-download download-icon" title="Download"></i>
+                            <i class="fas fa-heart favorite-icon" title="Favoritar"></i>
+                            <i class="fas fa-comment comment-icon" title="Comentar"></i>
+                            <i class="fas fa-share share-icon" title="Compartilhar"></i>
+                        </div>
+                    </div>
+                    <!-- Mais resultados podem ser adicionados aqui -->
+                </div>
+            </div>
+        </main>
+    
+    </body>
+</html>
+
+            

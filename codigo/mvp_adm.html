@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title> Editora Unifeso </title>
+        <link rel="stylesheet" type="text/css" href="css/estilo_menu_sup_novo.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo_geral_novo.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo_cx_busca_novo.css">
+        <script src="js/mvp.js"></script>
+    </head>
+
+    <body>
+        
+        <header class="top">
+        <!--MENU-->
+        <nav>
+            <ul class="menu">
+                <li><a href="mvp_index.html">Início</a></li>
+                <li><a href="mvp_sobre.html">Sobre a Editora</a></li>
+                <li><a href="#">Entrar</a>
+                    <ul>
+                        <li><a href="#">Sou aluno</a></li>
+                        <li><a href="#">Sou colaborador</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+            
+            <!--LOGO-->
+            <div id="img_logo">
+                <img src="img\logo.png" alt="logo Editora Unifeso">
+            <!--<p id="inicio"> Bem-vindo à plataforma da Editora Unifeso!</p>-->
+            </div>
+        </header>    
+
+
+        <!--LINHA CX BUSCA-->
+        <main>
+            <div class="search-container">
+                <!-- Caixa de busca geral -->
+                <section id="search-general" class="search-section">
+                
+                    <nav>
+                        <ul>
+                            <h1><li><a href="#" onclick="showSection('search-general')">Pesquisa Geral</a></li></h1>
+                            <h1><li><a href="#" onclick="showSection('search-advanced')">Pesquisa Avançada</a></li></h1>
+                        </ul>
+                    </nav>
+                
+                    <form>
+                        <input type="text" name="search" placeholder="Digite o que você deseja pesquisar...">
+                        <button type="submit"><a href="mvp_resultado.html">Pesquisar</a></button>
+                    </form>
+                </section>
+
+                <!-- Busca avançada -->
+                <section id="search-advanced" class="search-section">
+                    <nav>
+                        <ul>
+                            <h1><li><a href="#" onclick="showSection('search-general')">Pesquisa Geral</a></li></h1>
+                            <h1><li><a href="#" onclick="showSection('search-advanced')">Pesquisa Avançada</a></li></h1>
+                        </ul>
+                    </nav>
+                    
+                    <form>
+                        <div class="form-group">    
+                            <span>
+                                <select name="pesquisaAvancada">
+                                    <option>Pesquisar por:</option>
+                                    <option value="t">Título</option>
+                                    <option value="a">Autor</option>
+                                    <option value="p">Tipo da publicação</option>
+                                    <option value="d">Data da publicação</option>
+                                    <option value="c">Palavras-chave</option>
+                                </select>
+                            </span>
+                            <span>
+                                <input type="text" placeholder="Digite o termo da pesquisa">
+                            </span>
+                        </div>
+                        <button type="submit"><a href="mvp_resultado.html"> Pesquisar </a></button>
+                    </form>
+                </section>
+            </div>
+        </main>
+
+        <article>
+            <ul class="adm">
+                <li><a href="mvp_cadastro.html">Cadastro de publicações</a></li>
+                <li><a href="#">Editar publicações</a></li>
+                <li><a href="#">Excluir publicações</a></li>
+                <li><a href="#">Gerenciar publicações</a></li>
+            </ul>
+        </article>
+
+    </body>
+</html>

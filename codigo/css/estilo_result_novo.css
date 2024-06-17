@@ -1,0 +1,77 @@
+/*---------- CX BUSCA ----------*/
+.search-container-small {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/*---------- FILTROS ----------*/
+.results-container {
+    display: flex;
+    gap: 100px;
+    margin: 30px;
+}
+
+input[type="checkbox"]  {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/*---------- RESULTADOS ----------*/
+.result-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.options {
+    display: flex;
+    gap: 20px; /* Adicionando espaço entre os ícones */
+}
+
+.options i {
+    font-size: 16pt;
+    color: #127e71;
+    cursor: pointer;
+}
+
+.options i:hover {
+    color: #76bbb3;
+}
+
+/* Estilos para dicas de ferramentas */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}   

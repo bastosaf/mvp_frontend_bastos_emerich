@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title> Cadastro de publicações </title>
+        <link rel="stylesheet" type="text/css" href="css/estilo_menu_sup_novo.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo_geral_novo.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo_cad_novo.css">
+        <script src="js/mvp.js"></script>
+    </head>
+
+    <body>
+        <header class="top">
+            <!--MENU-->
+            <nav>
+                <ul class="menu">
+                    <li><a href="mvp_index.html">Início</a></li>
+                    <li><a href="mvp_sobre.html">Sobre a Editora</a></li>
+                    <li><a href="#">Entrar</a>
+                        <ul>
+                            <li><a href="#">Sou aluno</a></li>
+                            <li><a href="mvp_adm.html">Sou colaborador</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+    
+                
+                <!--LOGO-->
+                <div id="img_logo">
+                    <img src="img\logo.png" alt="logo Editora Unifeso">
+                <!--<p id="inicio"> Bem-vindo à plataforma da Editora Unifeso!</p>-->
+                </div>
+            </header>    
+
+        <h1>Cadastro de publicações</h1>
+        </br>
+        </br>
+        
+        <main>
+        <form name="cadastro">
+            <table>
+                <tr>
+                    <td><label>Tipo da publicação:</label></td>
+                    <td>
+                        <select name="tipoPublicacao">
+                            <option value="t">Trabalho de conclusão de curso</option>
+                            <option value="r">Resumo em congresso</option>
+                        </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><label>Título da publicação:</label></td>
+                    <td><textarea name="titulo" rows="3" cols="28"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td><label>Autores:</label></td>
+                </tr>
+
+                <tr>
+                    <td><label>Autor1:</label></td>
+                    <td><input type="text" name="Autor" size="30"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Autor2:</label></td>
+                    <td><input type="text" name="Autor" size="30"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Autor3:</label></td>
+                    <td><input type="text" name="Autor" size="30"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Data da publicação:</label></td>
+                    <td><input type="date" name="dataPublicacao"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Nome da:</label></td>
+                    <td>
+                        <input type="checkbox" name="nome[]" value="r"> Revista
+                        <input type="checkbox" name="nome[]" value="e"> Evento
+                        <input type="text" name="nome" size="30">
+                    </td>
+                </tr>
+
+                            <tr>
+                    <td><label>Resumo:</label></td>
+                    <td><textarea name="resumo" rows="5" cols="28"></textarea></td>
+                </tr>
+
+               <tr></tr>
+
+                <tr>
+                    <td colspan="2">
+                        <button type="submit" name="enviar" value="Enviar">Enviar</button>
+                        <button type="reset" name="limpar" value="Limpar">Limpar</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+    </body>
+</html>
